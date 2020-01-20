@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "diff-viewer": [
+        "dist/diff-viewer"
+      ],
+      "diff-viewer/*": [
+        "dist/diff-viewer/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

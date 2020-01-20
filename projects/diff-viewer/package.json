@@ -1,0 +1,21 @@
+{
+  "name": "diff-viewer",
+  "version": "1.0.5",
+  "peerDependencies": {
+    "@angular/common": "^8.2.14",
+    "@angular/core": "^8.2.14"
+  },
+  "dependencies": {
+    "diff": "^4.0.2",
+    "diff2html": "^3.0.0-master.128204d"
+  },
+  "ngPackage": {
+    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+    "lib": {
+      "entryFile": "src/public-api.ts"
+    },
+    "whitelistedNonPeerDependencies": [
+      "."
+    ]
+  }
+}
