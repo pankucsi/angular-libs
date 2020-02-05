@@ -25,6 +25,14 @@ export class DiffViewerPipe implements PipeTransform {
     let parsedHtml = parser.parseFromString(outputHtml, "text/html");
     const onlyDiffs = parsedHtml.querySelector(".d2h-files-diff");
 
+    this.removeInfoLabel(onlyDiffs);
+
     return onlyDiffs.innerHTML;
+  }
+
+  private removeInfoLabel(element: Element) {
+    element
+      .querySelector("tr td.d2h-code-side-linenumber.d2h-info")
+      .parentElement.remove();
   }
 }
