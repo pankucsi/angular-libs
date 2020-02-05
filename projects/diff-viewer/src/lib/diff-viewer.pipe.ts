@@ -31,8 +31,12 @@ export class DiffViewerPipe implements PipeTransform {
   }
 
   private removeInfoLabel(element: Element) {
-    element
-      .querySelector("tr td.d2h-code-side-linenumber.d2h-info")
-      .parentElement.remove();
+    const infoLines = element.querySelectorAll(
+      "tr td.d2h-code-side-linenumber.d2h-info"
+    );
+
+    infoLines.forEach(infoLine => {
+      infoLine.parentElement.remove();
+    });
   }
 }
